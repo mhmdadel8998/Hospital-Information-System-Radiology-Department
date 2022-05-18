@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Complains </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/complains/images/icons/spreadsheet-512.png" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/complains/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/complains/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/complains/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/complains/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/complains/vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/complains/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/complains/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/complains/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/complains/css/flex-slider.css">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+	<header class="header-area header-sticky">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="main-nav">
+						<!-- ***** Logo Start ***** -->
+						<a  class="logo">
+                            <p class="radio">Radiology  
+                             </p>
+                            
+                        </a>
+						<!-- ***** Logo End ***** -->
+						<!-- ***** Menu Start ***** -->
+						<ul class="nav">
+							<li><a href="/patients">Patients</a></li>
+							<li><a href="/doctors">Doctors</a></li>
+							<li><a href="/techs">Technicians</a></li>
+							<li><a href="/devices">Devices</a></li>
+							<li><a href="/dashboard">Dashboard</a></li>
+							<li><a href="/complains" class="active">Complains</a></li>
+							<li><a href="/logout"> <button class="btn btn--radius-2 btn--blue" href="/logout"
+										style="background-color: #c44cba;
+								border-radius: 20px;
+								font-weight: bold;
+								color: white;
+								font-family: Verdana, Geneva, Tahoma, sans-serif;">Log out</button> </a> </li>
+
+						</ul>
+						<a class='menu-trigger'>
+							<span>Menu</span>
+						</a>
+						<!-- ***** Menu End ***** -->
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="limiter">
+		<div class="container-table100">
+			
+			<div class="wrap-table100">
+				<div class="table100">
+					<% if (complains.length> 0) { %>
+						<table>
+							<thead>
+								<tr class="table100-head">
+									<th class="column2">Mail</th>
+									<th class="column3">Date</th>
+									<th class="column4">Message</th>
+
+
+								</tr>
+							</thead>
+							<tbody>
+								<% complains.forEach((complain)=> { %>
+									<tr>
+										<td class="column1">
+											<%= complain.patient %>
+										</td>
+										<td class="column2">
+											<%= complain.createdAt %>
+										</td>
+										<td class="column3">
+											<%= complain.complain %>
+										</td>
+
+									</tr>
+									<% }) %>
+
+
+										<% } else { %>
+											<p class="noDoc"> There is no complains to show</p>
+
+											<% } %>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Copyright &copy; 2021 Team-10 Database</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<script>
+
+		function btnClicked1() {
+			document.location.href = "https://www.google.com/";
+		}
+
+	</script>
+	<script src="/complains/js/bootstrap.min.js"></script>
+	<script src="/complains/js/jquery.counterup.min.js"></script>
+	<script src="/complains/js/jquery-2.1.0.min.js"></script>
+	<script src="/complains/js/custom.min.js"></script>
+	<script src="/complains/js/imgfix.min.js"></script>
+	<script src="/complains/js/scrollreveal.min.js"></script>
+	<script src="/complains/js/waypoints.min.js"></script>
+	<script src="/complains/js/popper.js"></script>
+
+	<!--===============================================================================================-->
+	<script src="/complains/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/complains/vendor/bootstrap/js/popper.js"></script>
+	<script src="/complains/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/complains/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/complains/js/main.js"></script>
+
+</body>
+
+</html>

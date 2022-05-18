@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Profile </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/patientProfile/images/icons/spreadsheet-512.png" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/patientProfile/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/patientProfile/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/patientProfile/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/patientProfile/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/patientProfile/vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/patientProfile/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/patientProfile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/patientProfile/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/patientProfile/css/flex-slider.css">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+	<header class="header-area header-sticky">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="main-nav">
+						<!-- ***** Logo Start ***** -->
+						<a class="logo">
+							<p class="radio">Radiology</p>
+							</p>
+
+						</a>
+						<!-- ***** Logo End ***** -->
+						<!-- ***** Menu Start ***** -->
+						<ul class="nav">
+							<li><a href="/appointments">Book</a></li>
+							<li><a href="/contactus">Complain</a></li>
+							<li><a href="/logout"> <button class="btn btn--radius-2 btn--blue" href="/logout" style="background-color: #c44cba;
+								border-radius: 20px;
+								font-weight: bold;
+								color: white;
+								font-family: Verdana, Geneva, Tahoma, sans-serif;">Log out </button> </a> </li>
+
+						</ul>
+						<a class='menu-trigger'>
+							<span>Menu</span>
+						</a>
+						<!-- ***** Menu End ***** -->
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="limiter">
+		<div class="container-table100">
+
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Name</th>
+								<th class="column3">ID</th>
+								<th class="column4">Sex</th>
+								<th class="column5">Age</th>
+
+								<th class="column7">Phone</th>
+
+								<th class="column9">Email</th>
+								<!--<th class="column10">Password</th>-->
+								<th class="column10">Scans</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="column1">
+									<%= patient.name %>
+								</td>
+								<td class="column2">
+									<%= patient._id %>
+								</td>
+								<td class="column3">
+									<%= patient.sex %>
+								</td>
+								<td class="column4">
+									<%= patient.age %>
+								</td>
+
+								<td class="column5">
+									<%= patient.phoneNumber %>
+								</td>
+
+								<td class="column6">
+									<%= patient.email %>
+								</td>
+								<td class="column7">
+									<ul>
+										<% files.map(file=> { %>
+											<li>
+												<a href="<%= file.url %>">
+													<%= file.name %>
+												</a>
+											</li>
+											<% }) %>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Copyright &copy; 2021 Team-10 Database</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+	<script>
+		function btnClicked() {
+			document.location.href = "https://www.google.com/";
+		}
+		function btnClicked1() {
+			document.location.href = "https://www.google.com/";
+		}
+	</script>
+
+	<script src="/patientProfile/js/bootstrap.min.js"></script>
+	<script src="/patientProfile/js/jquery.counterup.min.js"></script>
+	<script src="/patientProfile/js/jquery-2.1.0.min.js"></script>
+	<script src="/patientProfile/js/custom.min.js"></script>
+	<script src="/patientProfile/js/imgfix.min.js"></script>
+	<script src="/patientProfile/js/scrollreveal.min.js"></script>
+	<script src="/patientProfile/js/waypoints.min.js"></script>
+	<script src="/patientProfile/js/popper.js"></script>
+
+	<!--===============================================================================================-->
+	<script src="/patientProfile/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/patientProfile/vendor/bootstrap/js/popper.js"></script>
+	<script src="/patientProfile/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/patientProfile/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/patientProfile/js/main.js"></script>
+
+</body>
+
+</html>
